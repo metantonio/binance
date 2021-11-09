@@ -42,7 +42,7 @@ returns, symbols = [], []
 
 for symbol in relevant:
     if len(klines[symbol])> 0:
-        cumret= (pd.DataFrame(klines[symbol])[4].astype(float).ptc_change()+1).prod()-1
+        cumret= (pd.DataFrame(klines[symbol])[4].astype(float).pct_change()+1).prod()-1
         returns.append(cumret)
         symbols.append(symbol)
 
