@@ -35,7 +35,7 @@ for symbol in tqdm(relevant):
 
 ## print(klines)
 
-## obteniendo ptc change en porcentaje cada minuto
+## obteniendo pct change en porcentaje cada minuto
 #pd.DataFrame(klines['BTCUSDT'])[4].astype(float).pct_change()+1).prod()-1
 
 returns, symbols = [], []
@@ -49,4 +49,4 @@ for symbol in relevant:
 retdf= pd.DataFrame(returns, index=symbols, columns=['ret'])
 
 ## 10 mejores criptos con retorno en USDT
-retdf.ret.nlargest(10)
+print(retdf.ret.nlargest(10))
